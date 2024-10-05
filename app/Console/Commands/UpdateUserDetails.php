@@ -31,6 +31,7 @@ class UpdateUserDetails extends Command
             $user->update([
                 'name' => $faker->name,
                 'timezone' => $faker->randomElement($timezones),
+                'attributes_changed' => true
             ]);
 
             $this->info("Updated user: {$user->name} , Timezone: {$user->timezone}");
